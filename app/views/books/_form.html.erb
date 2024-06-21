@@ -1,3 +1,4 @@
+<!-- app/views/books/_form.html.erb -->
 <%= form_with(model: book, local: true) do |form| %>
   <% if book.errors.any? %>
     <div id="error_explanation">
@@ -29,6 +30,16 @@
   <div class="field">
     <%= form.label :copies_available %>
     <%= form.number_field :copies_available %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publication_date %>
+    <%= form.date_field :publication_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cover_image %>
+    <%= form.file_field :cover_image %>
   </div>
 
   <div class="actions">

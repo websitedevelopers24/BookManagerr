@@ -13,4 +13,9 @@
   <body>
     <%= yield %>
   </body>
-</html>
+</html><nav>
+  <ul>
+    <li><%= link_to "English", url_for(locale: :en) %></li>
+    <li><%= link_to "العربية", url_for(locale: :ar) %></li>
+  </ul>
+</nav>

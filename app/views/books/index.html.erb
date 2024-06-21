@@ -1,14 +1,20 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Books</h1>
+<!-- app/views/books/index.html.erb -->
+<h1><%= t('books.index.title') %></h1>
 
 <div id="books">
-  <% @books.each do |book| %>
-    <%= render book %>
-    <p>
-      <%= link_to "Show this book", book %>
-    </p>
-  <% end %>
-</div>
+  <%= form_with(url: books_path, method: "get", id: "book-search-form", remote: true) do |form| %>
+    <div class="field">
+      <%= form.label :title_cont, t('books.index.search_by_title') %>
+      <%= form.text_field :title_cont, id: "book-title-search", autocomplete: "off" %>
+    </div>
 
-<%= link_to "New book", new_book_path %>
+    <div class="field">
+      <%= form.label :author_cont, t('books.index.search_by_author') %>
+      <%= form.text_field :author_cont, id: "book-author-search", autocomplete: "off" %>
+    </div>
+
+    <%= form.submit t('books.index.search_button'), class: "btn btn-primary" %>
+  <% end %>
+
+
+<%= link_to t('books.index.new_book'), new_book_path %>

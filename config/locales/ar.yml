@@ -1,0 +1,14 @@
+ar:
+  books:
+    index:
+      title: "العنوان"
+      author: "المؤلف"
+      description: "الوصف"
+      copies_available: "نسخ متاحة"
+      publication_date: "تاريخ النشر"
+      actions: "إجراءات"
+      no_books_found: "لم يتم العثور على كتب."
+      search_by_title: "البحث بالعنوان:"
+      search_by_author: "البحث بالمؤلف:"
+      search_button: "بحث"
+      new_book: "كتاب جديد"
